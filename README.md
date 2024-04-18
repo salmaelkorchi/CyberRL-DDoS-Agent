@@ -8,7 +8,7 @@ The application of RL to network attack detection has several advantages, includ
 
 In the following sections, we will detail the implementation of our RL-based attack detection environment, as well as the agent training process. We will then present the results of our experiments and discuss the performance of our model, before concluding with perspectives on future developments in RL-based network attack detection.
 
-# Labellisation des données : 
+# Data Labeling :
 
 In the context of data labeling, the initial dataset consisted of 7 columns and 9999 rows. These columns were composed of the following features:
 
@@ -50,7 +50,7 @@ The result shows that the observation space is a continuous vector of length 11 
 
 This means that the agent can perform one of the two following actions, and the observation it receives is a vector of 11 values representing the one-hot encoded source IP address. The reward is calculated based on the action and label of the current data point.
 
-# Integration of Reinforcement Learning:
+# Integration of Reinforcement Learning :
 
 In this code, we have implemented an agent using the Q-learning algorithm for learning in a gym-like environment, specifically designed for DDoS attack detection.
 
@@ -70,7 +70,7 @@ The Q-learning algorithm is then executed for the specified number of episodes. 
 
 At the end of training, a message indicates that the training is complete, and episode statistics are printed to track the agent's performance over time.
 
-# Training the agent with RL:
+# Training the agent with RL :
 
 The results below indicate that the agent learns and improves over episodes by adjusting its action policy through exploration and exploitation of information stored in the Q-table.
 
@@ -82,13 +82,13 @@ Here is an explanation of three episodes:
 * Episode 2: Improvement is observed with a total reward of 198, while the exploration rate decreases slightly to 0.9801.
 * Episode 3: The total reward is negative (-38), indicating a less satisfactory performance for this episode. The exploration rate continues to decrease to 0.9702989999999999.
 
-# Conclusion:
+# Conclusion :
 
 In conclusion, our study demonstrates that the application of Reinforcement Learning (RL) to network attack detection holds significant potential. While our model has shown promising results, especially in effectively identifying DDoS attacks, some challenges persist. Among these challenges, managing the balance between exploration and exploitation as well as designing adequate state representations remain crucial aspects to address to improve the performance and generalization of our model.
 
 Our work paves the way for new possibilities in the field of cybersecurity, offering an innovative and adaptive approach to address cyber threats. By combining RL principles with the unique challenges posed by network attack detection, we are able to design smarter and more resilient security systems capable of adapting to the constantly evolving cyber threat landscape.
 
-# Perspectives:
+# Perspectives :
 
 To further advance, we plan to explore advanced Reinforcement Learning (RL) techniques, including the use of deep neural networks (Deep Q-Networks), to handle complex state spaces. Deep neural networks have demonstrated their ability to capture highly nonlinear data structures and generalize models from complex input data. By integrating these neural architectures into our network attack detection system, we may be able to better process information from diverse sources and detect more subtle and evolving attack patterns.
 
